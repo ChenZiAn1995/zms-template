@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app-container">
     <div>
       123
     </div>
@@ -14,5 +14,9 @@ export default {
 };
 </script>
 
-<style >
+<style lang="scss" >
+.app-container {
+  height: 100vh;
+  background-color: skyblue;
+}
 </style>
