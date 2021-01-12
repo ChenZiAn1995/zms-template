@@ -1,0 +1,26 @@
+{
+  "name": "mf-demo-shell",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "local": "webpack serve --config build/webpack.dev.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tree": "treer -e tree.txt -i \"/node_modules|.git|.idea|tree.txt|.editorconfig|visitor|dist|test.md|server/\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^2.6.12"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "html-webpack-plugin": "^4.5.1",
+    "vue-loader": "^15.9.6",
+    "vue-template-compiler": "^2.6.12",
+    "webpack": "^5.12.3",
+    "webpack-cli": "^4.3.1",
+    "webpack-dev-server": "^3.11.1",
+    "webpack-merge": "^5.7.3"
+  }
+}
