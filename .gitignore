@@ -16,3 +16,4 @@ yarn-error.log*
 *.sln
 annotation.txt
 .passwd
+tree.txt

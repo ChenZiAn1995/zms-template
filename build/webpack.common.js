@@ -8,6 +8,10 @@ const {VueLoaderPlugin} = require("vue-loader");
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const { ModuleFederationPlugin } = require("webpack").container;
+
+const deps = require("../package.json").dependencies;
+const {component, page, remotes, projectName, filename}=require('./federation')
 
 // 引入配置文件
 let env = require('../config/prod.env')
@@ -42,6 +46,7 @@ module.exports = {
 
   // Customize the webpack build process
   plugins: [
+
     // 存放配置对象，方便项目引用
     new webpack.DefinePlugin({
       // 定义...
@@ -73,6 +78,17 @@ module.exports = {
           },
         },
       ],
+    }),
+
+    new ModuleFederationPlugin({
+      name: projectName,
+      filename: filename,
+      remotes:[...remotes],
+      exposes: {
+        ...component,
+        ...page
+      },
+      shared: {...deps}
     }),
   ],
 
