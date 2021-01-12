@@ -83,7 +83,7 @@ module.exports = {
     new ModuleFederationPlugin({
       name: projectName,
       filename: filename,
-      remotes:[...remotes],
+      remotes:{...remotes},
       exposes: {
         ...component,
         ...page
