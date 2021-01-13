@@ -7,7 +7,6 @@ const common = require('./webpack.common.js')
 module.exports = merge(common, {
   // 设置webpack模式
   mode: 'development',
-
   devtool: "source-map",
   optimization: {
     minimize: false,
@@ -19,7 +18,7 @@ module.exports = merge(common, {
     // open: true, // 是否开启新窗口
     compress: true,
     // hot: true, // 是否启用HMR模块热更新
-    port: 19900,
+    port: 6600,
     headers: {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
