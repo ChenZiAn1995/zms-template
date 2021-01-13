@@ -11,8 +11,8 @@ module.exports = merge(common, {
   devtool: false,
   output: {
     path: paths.build,
-    publicPath: './',
     filename: 'js/[name].[contenthash].bundle.js',
+    publicPath: "auto",
   },
   plugins: [
     // Extracts CSS into separate files
@@ -44,9 +44,9 @@ module.exports = merge(common, {
   optimization: {
     minimize: true,
     minimizer: [new OptimizeCssAssetsPlugin(), new TerserPlugin()],
-    runtimeChunk: {
-      name: 'runtime',
-    },
+    // runtimeChunk: {
+    //   name: 'runtime',
+    // },
   },
   performance: {
     hints: false,
