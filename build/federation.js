@@ -9,7 +9,7 @@ const page = { // 暴露的页面
 }
 
 const remotes = { // 引入的内容
-  'wsfComp':'wsfComp@http:localhost:19999/remoteEntry.js'
+  'wsfComp':'wsfComp@http://localhost:19999/remoteEntry.js'
 }
 
 module.exports = {
