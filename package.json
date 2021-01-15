@@ -1,7 +1,7 @@
 {
-  "name": "mf-template",
+  "name": "{{projectName}}",
   "version": "1.0.0",
-  "description": "基于Webpack5的ModuleFederation微前端基础模板",
+  "description": "{{description}}",
   "main": "index.js",
   "scripts": {
     "local": "cross-env NODE_ENV=local webpack serve --config build/webpack.dev.js",
@@ -12,7 +12,7 @@
     "build:uat": "cross-env NODE_ENV=uat webpack --config build/webpack.prod.js",
     "build:prod": "cross-env NODE_ENV=production webpack --config build/webpack.prod.js"
   },
-  "author": "",
+  "author": "{{author}}",
   "license": "ISC",
   "dependencies": {
     "vue": "^2.6.12"
